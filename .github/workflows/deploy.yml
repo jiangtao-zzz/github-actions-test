@@ -22,9 +22,9 @@ jobs:
         run: |
           mkdir -p ~/.ssh/
           echo ${{secrets.ID_RSA}} > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan ${{secrets.HOST}} > ~/.ssh/known_hosts
-          chmod 700 ~/.ssh && chmod 600 ~/.ssh/*
+          # chmod 600 ~/.ssh/id_rsa
+          # ssh-keyscan ${{secrets.HOST}} > ~/.ssh/known_hosts
+          # chmod 700 ~/.ssh && chmod 600 ~/.ssh/*
         
       - name: Scp
         run: |
